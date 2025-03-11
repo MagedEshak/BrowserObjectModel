@@ -44,7 +44,7 @@ document.getElementById("openPop").onclick = function () {
     
     opPop = setTimeout(() => {
 
-        popWindow = window.open("", "Pop UP Window", "width=500px;height=500px;");
+        popWindow = window.open("", "Pop UP Window", "width=500px,height=500px;");
 
         popWindow.document.write(`<!DOCTYPE html>
                                     <html lang="en">
@@ -137,18 +137,38 @@ newBut.innerHTML = "Start Count";
 let count;
 
 newBut.onclick = function () {
-    count = setInterval(function () {
-        for (var i = 10; i >= 0; i--) {
-            let newDi = document.createElement("div");
-            document.body.appendChild(newDi);
-            newDi.innerHTML = i + "<br>";
-            console.log(i);
+      let newDi = document.createElement("div");
+        document.body.appendChild(newDi);
+        newDi.innerHTML = 10;
+    let count = newDi.innerHTML;
+    
+    countIn = setInterval(function () {
+
+        count--;
+         newDi.innerHTML = count;
+        console.log(count);
             
-            if (i === 0) {
-                clearInterval(count);
-            }
+
+        if (count === 5) {
+    
+            // console.log("-- التكليف 05 --");
+            //  console.log("----------------------");
+            window.open("https://elzero.org/", "elzero", "width=500px,height=500,left=500px,top=300px");
         }
 
+        if (count === 0) {
+            // console.log("-- التكليف 03 --");
+            //  console.log("----------------------");
+                
+            clearInterval(countIn);
+            
+
+            // console.log("-- التكليف 04 --");
+            //  console.log("----------------------");
+                
+            //location.assign("https://elzero.org/");
+        }
+        
     }, 1000);
 }
 
