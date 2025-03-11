@@ -170,4 +170,4 @@ newBut.onclick = function () {
         }
         
     }, 1000);
-}ok
+}
