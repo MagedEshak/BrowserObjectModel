@@ -137,15 +137,15 @@ newBut.innerHTML = "Start Count";
 let count;
 
 newBut.onclick = function () {
-      let newDi = document.createElement("div");
-        document.body.appendChild(newDi);
-        newDi.innerHTML = 10;
+    let newDi = document.createElement("div");
+    document.body.appendChild(newDi);
+    newDi.innerHTML = 10;
     let count = newDi.innerHTML;
     
     countIn = setInterval(function () {
 
         count--;
-         newDi.innerHTML = count;
+        newDi.innerHTML = count;
         console.log(count);
             
 
@@ -170,8 +170,4 @@ newBut.onclick = function () {
         }
         
     }, 1000);
-}
-
-
-console.log("-- التكليف 04 --");
-console.log("----------------------");
+}ok
